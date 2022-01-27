@@ -15,7 +15,7 @@ import { Ionicons } from "@expo/vector-icons";
 const MoreDetail = () => {
   const [isEnabled, setIsEnabled] = useState(false);
   const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
-
+  const navigation = useNavigation();
   const handleSignOut = () => {
     auth
       .signOut()

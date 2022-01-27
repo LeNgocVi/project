@@ -93,7 +93,7 @@ const LoginScreen = () => {
       </View>
       <View style={styles.txtbottom}>
         <Text>If you have trouble logging in to KindiCare CRM,</Text>
-        <Text>please contact our Customer Care team</Text>
+        <Text style ={styles.text1}>please contact our Customer Care team</Text>
       </View>
     </KeyboardAvoidingView>
   );
@@ -170,4 +170,7 @@ const styles = StyleSheet.create({
     top: 120,
     lineHeight: 24,
   },
+  text1:{
+  color:"red",
+  }
 });

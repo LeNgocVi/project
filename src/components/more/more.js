@@ -2,8 +2,10 @@ import React from "react";
 import { TouchableOpacity, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
-
-export default function More({ navigation }) {
+import { useNavigation } from "@react-navigation/core";
+import { auth } from "../../../firebase";
+export default function More() {
+  const navigation = useNavigation();
   return (
     <SafeAreaView>
       <TouchableOpacity
@@ -14,6 +16,7 @@ export default function More({ navigation }) {
         <View style={styles.userName}>
           <Text style={styles.Text}>Jane Cooper</Text>
           <Text style={styles.text1}>Provider User (Admin)</Text>
+          <Text>Email: {auth.currentUser?.email}</Text>
         </View>
         <View style={styles.iconArrow}>
           <Ionicons name="chevron-forward-sharp" size={20} color={"black"} />
